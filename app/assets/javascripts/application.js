@@ -12,3 +12,15 @@
 //
 //= require rails-ujs
 //= require_tree .
+$(document).ready(function(){
+  headerActiveListener();
+})
+
+var headerActiveListener = function(){
+
+  $('.header > li').on('click', function(e){
+    e.preventDefault();
+    $('.header > li').removeClass('active');
+    $(this).addClass('active');
+  });
+}
