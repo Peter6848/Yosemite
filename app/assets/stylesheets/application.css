@@ -13,6 +13,24 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  width: 100%;
+}
+
+.about-image {
+  width: 50%;
+  float: left;
+}
+
+.about-text {
+  width: 49%;
+  float: right;
+}
+#lake-image {
+  height: 25em;
+  width: 100%;
+}
+
  .header {
    position: relative;
    top: 0;
