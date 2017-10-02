@@ -10,7 +10,29 @@
   </head>
 
   <body>
-    
+    <div class='header-container'>
+      <ul class='header'>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><a class="header-link" href="#">Trips</a></li>
+        <li>
+
+          <a class="header-link" href="#">About</a>
+
+        </li>
+        <li>
+          <% if logged_in? %>
+            <%= link_to 'Logout', logout_path %>
+          <% else %>
+            <%= link_to 'Sign Up', new_user_path %>
+            <li>
+            <%= link_to 'Log In', new_session_path, class: 'log_in' %>
+            </li>
+          <% end %>
+        </li>
+      </ul>
+      <img id='logo' src="/assets/yosemite-sierra-fly-fishing.png" alt="yosemite sierra fly fishing">
+    </div>
+
     <%= yield %>
   </body>
 </html>

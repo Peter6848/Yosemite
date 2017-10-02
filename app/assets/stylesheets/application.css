@@ -13,22 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
 .container {
   width: 100%;
 }
 
 .about-image {
-  width: 50%;
-  float: left;
+  width: 100%;
+  /*float: left;*/
+  position: absolute;
 }
 
 .about-text {
-  width: 49%;
-  float: right;
+  height: 25em;
+  /*width: 49%;*/
+
+  font-family: 'Arial';
+  /*background-color: #adadad;*/
+  text-align: center;
 }
 #lake-image {
-  height: 25em;
+  height: 40em;
   width: 100%;
+  opacity: .35;
 }
 
  .header {
