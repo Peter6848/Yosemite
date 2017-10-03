@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   get '/logout', to: 'sessions#destroy', as: :logout
+  resources :trips
+  get '/about', to: 'about#index'
 end
