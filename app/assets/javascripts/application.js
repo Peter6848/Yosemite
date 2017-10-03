@@ -26,7 +26,7 @@ var headerActiveListener = function(){
 
 var headerAnimation = function(){
   $('.header-link').hide();
-  $('.header-icon').on('mouseover', function(){
+  $('.header-icon').on('mousedown', function(){
     $('.header-link').slideDown('fast');
   })
   $('.header').on('mouseleave', function(){

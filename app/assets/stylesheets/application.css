@@ -57,12 +57,11 @@ ul {
   padding: 0;
   overflow: hidden;
   width: 20%;
-
-  /*background-color: #adadad;*/
+  z-index: 1000;
 }
 
 li {
-
+  background-color: #5b5b5b;
 }
 
 .header-icon {
@@ -72,7 +71,6 @@ li {
   width: 100%;
   height: 3em;
   text-align: center;
-  /*padding: 14px 16px;*/
   text-decoration: none;
 }
 
