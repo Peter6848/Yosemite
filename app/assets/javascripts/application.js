@@ -14,12 +14,22 @@
 //= require_tree .
 $(document).ready(function(){
   headerActiveListener();
+  headerAnimation();
 })
 
 var headerActiveListener = function(){
-
   $('.header > li').on('click', function(e){
     $('.header > li').removeClass('active');
     $(this).addClass('active');
   });
+}
+
+var headerAnimation = function(){
+  $('.header-link').hide();
+  $('.header-icon').on('mouseover', function(){
+    $('.header-link').slideDown('fast');
+  })
+  $('.header').on('mouseleave', function(){
+    $('.header-link').hide();
+  })
 }

@@ -1,5 +1,5 @@
-<%= form_with model: @user, method: :post do |f| %>
+<%= form_with url: sessions_path do |f| %>
   <%= f.email_field :email, placeholder: 'Email' %>
   <%= f.password_field :password, placeholder: 'Password' %>
-  <%= f.submit 'Login' %>
+  <%= f.submit 'Login', class: 'log_in' %>
 <% end %>
