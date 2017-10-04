@@ -40,7 +40,12 @@ var showTripInfoListener = function(){
     e.preventDefault();
 
     var tripInfo = $(this).closest('.trips').find('.trip-info');
-    tripInfo.css('visibility', 'visible');
+    tripInfo.toggle('slow');
+    // debugger
+    // tripInfo.css('visibility', 'visible');
+    // tripInfo.toggle('slow', function(){
+    //   tripInfo.show();
+    // })
 
     $(this).css('background-color', '#272728');
   })

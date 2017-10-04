@@ -119,7 +119,7 @@ a:hover:not(.active) {
   float: right;
   text-align: center;
   width: 70%;
-  visibility: hidden;
+  display: none;
   font-family: 'Arial';
 }
 
@@ -159,4 +159,8 @@ a:hover:not(.active) {
   display: inline-block;
   font-size: 16px;
   outline: 0;
+}
+
+.description {
+  padding: 4%;
 }
