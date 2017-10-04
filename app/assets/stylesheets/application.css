@@ -120,6 +120,7 @@ a:hover:not(.active) {
   text-align: center;
   width: 70%;
   visibility: hidden;
+  font-family: 'Arial';
 }
 
 .trips-images {
@@ -130,10 +131,11 @@ a:hover:not(.active) {
 }
 
 .book-info {
-
+  width: 70%;
+  float: right;
 }
 
-.book-button {
+.details-button {
   margin-left: 5%;
   background-color: #5b5b5b;
   border: none;
@@ -143,4 +145,18 @@ a:hover:not(.active) {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  outline: 0;
+}
+
+.book-button {
+  float: right;
+  background-color: #5b5b5b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: 0;
 }

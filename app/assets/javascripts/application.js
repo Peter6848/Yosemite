@@ -15,6 +15,7 @@
 $(document).ready(function(){
   headerActiveListener();
   headerAnimation();
+  showTripInfoListener();
 })
 
 var headerActiveListener = function(){
@@ -31,5 +32,16 @@ var headerAnimation = function(){
   })
   $('.header').on('mouseleave', function(){
     $('.header-link').hide();
+  })
+}
+
+var showTripInfoListener = function(){
+  $('.details-button').on('click', function(e){
+    e.preventDefault();
+
+    var tripInfo = $(this).closest('.trips').find('.trip-info');
+    tripInfo.css('visibility', 'visible');
+
+    $(this).css('background-color', '#272728');
   })
 }
