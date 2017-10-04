@@ -16,6 +16,7 @@ $(document).ready(function(){
   headerActiveListener();
   headerAnimation();
   showTripInfoListener();
+  bookTripListener();
 })
 
 var headerActiveListener = function(){
@@ -41,12 +42,15 @@ var showTripInfoListener = function(){
 
     var tripInfo = $(this).closest('.trips').find('.trip-info');
     tripInfo.toggle('slow');
-    // debugger
-    // tripInfo.css('visibility', 'visible');
-    // tripInfo.toggle('slow', function(){
-    //   tripInfo.show();
-    // })
 
     $(this).css('background-color', '#272728');
+  })
+}
+
+var bookTripListener = function(){
+  $('.book-button').on('click', function(e){
+    e.preventDefault();
+    $(this).css('background-color', '#272728');
+    
   })
 }
