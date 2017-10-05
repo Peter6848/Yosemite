@@ -5,12 +5,21 @@ class UserTripsController < ApplicationController
   end
 
   def create
+    current_user
     @user_trip = UserTrip.new(user_trip_params)
     if @user_trip.save
       redirect_to root_path
     else
-      render ' '
+      render 'new'
     end
+  end
+
+  def edit
+
+  end
+
+  def destroy
+
   end
 
   def user_trip_params
