@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy', as: :logout
   resources :trips
   get '/about', to: 'about#index'
+  resources :user_trips
 end

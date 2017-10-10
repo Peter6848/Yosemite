@@ -1,0 +1,12 @@
+<h2>Add this trip</h2>
+<div class="trip-form">
+  <%= form_for(@user_trip) do |f| %>
+    <%= f.label :date %>
+    <%= f.date_field :date %>
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+    <%= f.label :guests %>
+    <%= f.text_field :guests %>
+    <%= f.submit  %>
+  <% end %>
+</div>

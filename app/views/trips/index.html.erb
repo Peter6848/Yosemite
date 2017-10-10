@@ -1,3 +1,6 @@
+<% if flash[:error]%>
+  <%= flash[:error] %>
+<% end %>
 
 <div class="container">
   <div class="trips">
@@ -6,10 +9,22 @@
     <div class="book-info" display>
       <button class="details-button" type="button" name="button">Details</button>
       <button class="book-button" type="button" name="button">Book This Trip</button>
-
     </div>
     <div class="trip-info">
       <p class="description">One of the most beautiful backgrounds while fishing, the Merced river flows through Yosemite Valley.  Within this river you can find wild rainbow and brown trout eager to eat a well presented fly.  </p>
+    </div>
+    <div class="book-trip-form">
+      <div class="trip-form">
+        <%= form_for(@trip) do |f| %>
+          <%= f.label :date %>
+          <%= f.date_field :date %>
+          <%= f.label :length %>
+          <%= f.text_field :length %>
+          <%= f.label :guests %>
+          <%= f.text_field :guests %>
+          <%= f.submit  %>
+        <% end %>
+    </div>
     </div>
   </div>
   <div class="trips">

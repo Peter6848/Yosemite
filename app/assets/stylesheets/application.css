@@ -164,3 +164,8 @@ a:hover:not(.active) {
 .description {
   padding: 4%;
 }
+
+.trip-form {
+  display: none;
+  
+}

@@ -2,10 +2,10 @@ class UserTripsController < ApplicationController
 
   def index
     @users = User.all
+    @user_trip = UserTrip.new
   end
 
   def create
-    current_user
     @user_trip = UserTrip.new(user_trip_params)
     if @user_trip.save
       redirect_to root_path

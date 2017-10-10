@@ -51,6 +51,12 @@ var bookTripListener = function(){
   $('.book-button').on('click', function(e){
     e.preventDefault();
     $(this).css('background-color', '#272728');
-    
+    var clickedButton = $('.container').closest('.book-button');
+    $(this).find('.trips').append('.trip-form');
+    $('.trip-form').toggle();
+
+    // var url = $(clickedButton).attr('href');
+    // var method = $(clickedButton).attr('method');
+    // var data = $()
   })
 }
