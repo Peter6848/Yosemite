@@ -52,7 +52,7 @@ var bookTripListener = function(){
     e.preventDefault();
     $(this).css('background-color', '#272728');
     var clickedButton = $('.container').closest('.book-button');
-    $(this).find('.trips').append('.trip-form');
+    $(this).find('.trips').append('.book-trip-form');
     $('.trip-form').toggle();
 
     // var url = $(clickedButton).attr('href');

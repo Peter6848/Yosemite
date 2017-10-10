@@ -11,7 +11,7 @@ class TripsController < ApplicationController
   end
 
   def create
-    @trip = Trip.new(trip_params)
+    @trip = current_user.trips.build(trip_params)
     if @trip.save
       redirect_to root_path
     else
