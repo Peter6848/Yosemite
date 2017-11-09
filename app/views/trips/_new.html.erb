@@ -2,10 +2,13 @@
   <%= form_for(:user_trip) do |f| %>
     <%= f.label :date %>
     <%= f.date_field :date %>
+    <br>
     <%= f.label :length %>
     <%= f.text_field :length %>
+    <br>
     <%= f.label :guests %>
     <%= f.text_field :guests %>
+    <br>
     <%= f.submit  %>
   <% end %>
 </div>

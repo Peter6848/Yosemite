@@ -174,18 +174,23 @@ a:hover:not(.active) {
 }
 
 .trip-form {
+  background-color: #dbdbdb;
+  padding-left: 5%;
+  text-align: left;
+  text-transform: uppercase;
   display: none;
   height: 100%;
   width: 100%;
-  border: 2px solid black;
   animation-name: stretch;
-  animation-duration: 1.5s;
-  /*animation-timing-function: ease-out;*/
+  animation-duration: .5s;
   animation-delay: 0;
-  /*animation-direction: alternate;*/
-  /*animation-iteration-count: infinite;*/
   animation-fill-mode: none;
   animation-play-state: running;
+}
+
+label {
+  display: inline-block;
+  width: 105px;
 }
 
 @keyframes stretch {
