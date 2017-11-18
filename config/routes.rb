@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :trips
   get '/about', to: 'about#index'
   resources :user_trips
+  resources :reservations
 end

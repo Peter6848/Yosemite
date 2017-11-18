@@ -141,15 +141,19 @@ a:hover:not(.active) {
   border: none;
   color: white;
   padding: 15px 32px;
+  margin-bottom: 3%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   outline: 0;
+  width: 20%;
 }
 
-.book-button {
-  float: right;
+
+
+.button_to input {
+  margin-left: 5%;
   background-color: #5b5b5b;
   border: none;
   color: white;
@@ -159,6 +163,7 @@ a:hover:not(.active) {
   display: inline-block;
   font-size: 16px;
   outline: 0;
+  width: 20%;
 }
 
 .description {
