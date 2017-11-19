@@ -47,6 +47,14 @@ var showTripInfoListener = function(){
   })
 }
 
+var svg = d3.select('.progress-bar').append('svg');
+
+svg.append('rect')
+  .attr('x', 20)
+  .attr('y', 20)
+  .attr('width', 600)
+  .attr('height', 20);
+
 // var bookTripListener = function(){
 //   $('.book-button').on('click', function(e){
 //     e.preventDefault();

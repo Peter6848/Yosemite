@@ -152,7 +152,7 @@ a:hover:not(.active) {
 
 
 
-.button_to input {
+.reserve-link {
   margin-left: 5%;
   background-color: #5b5b5b;
   border: none;
@@ -160,7 +160,7 @@ a:hover:not(.active) {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  /*display: inline-block;*/
   font-size: 16px;
   outline: 0;
   width: 20%;
@@ -209,3 +209,22 @@ label {
     transform: scale(1);
   }
 }
+
+.progress-bar {
+  width: 100%;
+  height: 50px;
+}
+
+/*.progress-meter .background {
+  fill: #ccc;
+}
+
+.progress-meter .foreground {
+  fill: #000;
+}
+
+.progress-meter text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}*/
