@@ -1,0 +1,23 @@
+<h2 id="reserve-h2">Reserve This Trip</h2>
+<div class="progress-bar-container">
+  <ul class="progress-bar">
+    <li class="progress-bar-active">DETAILS</li>
+    <li>PAYMENT</li>
+    <li>REVIEW</li>
+  </ul>
+</div>
+
+<div class="reservation-details">
+  <%= form_for(@reservation) do |f| %>
+    <%= f.label :guests %>
+    <%= f.select :guests, (1..12) %>
+    <br>
+    <%= f.label :guides %>
+    <%= f.select :guides, (1..4) %>
+    <br>
+    <%= f.label :requests %>
+    <%= f.text_field :requests %>
+    <br>
+    <%= f.submit "Go To Payment" %>
+  <% end %>
+</div>

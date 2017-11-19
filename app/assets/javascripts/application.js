@@ -16,7 +16,6 @@ $(document).ready(function(){
   headerActiveListener();
   headerAnimation();
   showTripInfoListener();
-  bookTripListener();
 })
 
 var headerActiveListener = function(){
@@ -46,12 +45,3 @@ var showTripInfoListener = function(){
     $(this).css('background-color', '#272728');
   })
 }
-
-// var bookTripListener = function(){
-//   $('.book-button').on('click', function(e){
-//     e.preventDefault();
-//     var bookingForm = $(this).closest('.trips').find('.trip-form');
-//     $(this).css('background-color', '#272728');
-//     $(bookingForm).toggle();
-//   })
-// }
