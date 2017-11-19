@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(version: 20171118174000) do
   enable_extension "plpgsql"
 
   create_table "reservations", force: :cascade do |t|
+    t.integer "guests"
+    t.integer "guides"
+    t.string "requests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

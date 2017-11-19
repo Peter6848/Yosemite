@@ -206,6 +206,10 @@ label {
   }
 }
 
+#reserve-h2 {
+  text-align: center;
+}
+
 .progress-bar-container {
   width: 100%;
 }
@@ -249,4 +253,16 @@ label {
 
 .progress-bar li:first-child:after {
   content: none;
+}
+
+.progress-bar li.progress-bar-active {
+  color: green;
+}
+
+.progress-bar li.progress-bar-active:before {
+  border-color: green;
+}
+
+.progress-bar li.progress-bar-active + li:after {
+  background-color: green;
 }
