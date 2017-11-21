@@ -16,7 +16,16 @@ $(document).ready(function(){
   headerActiveListener();
   headerAnimation();
   showTripInfoListener();
+  weatherAPI();
 })
+
+var weatherAPI = function(){
+  var api = 'http://api.openweathermap.org/data/2.5/weather?q=aptos&appid=fcde608bb653b40f860049b6be7f3666'
+
+  $.getJSON(api, function(data){
+    alert(data.coord.lon);
+  });
+}
 
 var headerActiveListener = function(){
   $('.header > li').on('click', function(e){
