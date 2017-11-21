@@ -23,8 +23,20 @@ var weatherAPI = function(){
   var api = 'http://api.openweathermap.org/data/2.5/weather?q=aptos&appid=fcde608bb653b40f860049b6be7f3666'
 
   $.getJSON(api, function(data){
-    alert(data.coord.lon);
-  });
+    // $('.current-weather').text(data.weather[0].description +
+        // data.main.forEach(function(item){
+        //   console.log(item);
+        // })
+
+        for(var category in data) {
+          if(data.hasOwnProperty(category)) {
+            $.each(data, function(key, value) {
+              console.log(key + " " + value);
+            })
+          }
+
+        }
+      })
 }
 
 var headerActiveListener = function(){
