@@ -20,23 +20,27 @@ $(document).ready(function(){
 })
 
 var weatherAPI = function(){
-  var api = 'http://api.openweathermap.org/data/2.5/weather?q=aptos&appid=fcde608bb653b40f860049b6be7f3666'
+var long;
+var lat;
+var temp;
+var api;
 
-  $.getJSON(api, function(data){
-    // $('.current-weather').text(data.weather[0].description +
-        // data.main.forEach(function(item){
-        //   console.log(item);
-        // })
-
-        for(var category in data) {
-          if(data.hasOwnProperty(category)) {
-            $.each(data, function(key, value) {
-              console.log(key + " " + value);
-            })
-          }
-
-        }
-      })
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      long = position.coords.longitude;
+      lat = position.coords.latitude;
+      api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=fcde608bb653b40f860049b6be7f3666';
+      $.getJSON(api, function(data){
+        var weatherType = data.weather[0].description;
+        var kelvin = data.main.temp;
+        var windSpeed = data.wind.speed;
+        var city = data.name;
+        $('.weather-data').html('latitude: ' + lat + '<br>longitude: ' + long);
+        console.log(city);
+        console.log(api);
+      });
+    })
+  }
 }
 
 var headerActiveListener = function(){
