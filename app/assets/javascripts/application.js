@@ -22,7 +22,7 @@ $(document).ready(function(){
 var weatherAPI = function(){
 var long;
 var lat;
-var temp;
+var tempFar;
 var api;
 
   if (navigator.geolocation) {
@@ -35,9 +35,21 @@ var api;
         var kelvin = data.main.temp;
         var windSpeed = data.wind.speed;
         var city = data.name;
-        $('.weather-data').html('latitude: ' + lat + '<br>longitude: ' + long);
+        tempFar = Math.floor((kelvin)*(9/5)-459.67);
         console.log(city);
+        $('#city').text('City: ' + city);
+        $('#weather-type').text('Looks like: ' + weatherType);
+        if(tempFar < 65) {
+          $('#temperature').text('Temperature: ' + tempFar + '°F.  Dress for cold weather!')
+          $('.weather-data').prepend("<img src='/assets/cold_weather.jpg' />");
+        } else {
+          $('#temperature').text('Temperature: ' + tempFar + '°F.  Dress for warm weather!')
+          $('.weather-data').prepend("<img src='cold_weather.jpg' />");
+        }
+        $('#wind').text('windSpeed: ' + windSpeed + 'mph');
+        console.log(tempFar);
         console.log(api);
+        // $('.weather-data').html('latitude: ' + lat + '<br>longitude: ' + long);
       });
     })
   }
