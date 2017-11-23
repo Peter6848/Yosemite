@@ -16,43 +16,74 @@ $(document).ready(function(){
   headerActiveListener();
   headerAnimation();
   showTripInfoListener();
-  weatherAPI();
+  yosemiteWeatherAPI();
+  showCelciusListener();
 })
+// GEO LOCATION WEATHER API
+//**********************************************************
+// var weatherAPI = function(){
+//   var long;
+//   var lat;
+//   var tempFar;
+//   var api;
+//
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(function(position) {
+//       long = position.coords.longitude;
+//       lat = position.coords.latitude;
+//       api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=fcde608bb653b40f860049b6be7f3666';
+//       $.getJSON(api, function(data){
+//         var weatherType = data.weather[0].description;
+//         var kelvin = data.main.temp;
+//         var windSpeed = data.wind.speed;
+//         var city = data.name;
+//         var tempFar = Math.floor((kelvin)*(9/5)-459.67);
+//         var tempCel = Math.floor(kelvin - 273);
+//         $('#city').text('City: ' + city);
+//         $('#weather-type').text('Looks like: ' + weatherType);
+//         if(tempFar < 65) {
+//           $('#temperature').text('Temperature: ' + tempFar + '°F or ' + tempCel + '°C')
+//           $('.weather-data').prepend("<img src='/assets/cold_weather.jpg' />");
+//         } else {
+//           $('#temperature').text('Temperature: ' + tempFar + '°F or ' + tempCel + '°C')
+//           $('.weather-data').prepend("<img src='cold_weather.jpg' />");
+//         }
+//         $('#wind').text('Wind speed: ' + windSpeed + 'mph');
+//       });
+//     })
+//   }
+// }
 
-var weatherAPI = function(){
-var long;
-var lat;
-var tempFar;
-var api;
+var yosemiteWeatherAPI = function(){
+  var tempFar;
+  var api = 'http://api.openweathermap.org/data/2.5/weather?lat=37.865101&lon=-119.538330&appid=fcde608bb653b40f860049b6be7f3666';
+    $.getJSON(api, function(data){
+      var weatherType = data.weather[0].description;
+      var kelvin = data.main.temp;
+      var windSpeed = data.wind.speed;
+      var city = data.name;
+      var tempFar = Math.floor((kelvin)*(9/5)-459.67);
+      var tempCel = Math.floor(kelvin - 273);
+      // $('#city').text(city);
+      $('#weather-type').text(weatherType);
+      $('#wind').text('Wind speed of ' + windSpeed + 'mph');
+      if(tempFar < 65) {
+        $('#temperature').text('Temperature of ' + tempFar + '°F or ' + tempCel + '°C')
+        // $('.weather-data').prepend("<img src='/assets/' />");
+      } else {
+        $('#temperature').text('Temperature of ' + tempFar + '°F or ' + tempCel + '°C')
+        // $('.weather-data').prepend("<img src='/assets/' />");
+      }
+      if(weatherType === 'clear sky') {
+        $('.weather-data').append("<i class='wi wi-day-sunny'> </i>");
+      }
+    });
+}
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      long = position.coords.longitude;
-      lat = position.coords.latitude;
-      api = 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&appid=fcde608bb653b40f860049b6be7f3666';
-      $.getJSON(api, function(data){
-        var weatherType = data.weather[0].description;
-        var kelvin = data.main.temp;
-        var windSpeed = data.wind.speed;
-        var city = data.name;
-        tempFar = Math.floor((kelvin)*(9/5)-459.67);
-        console.log(city);
-        $('#city').text('City: ' + city);
-        $('#weather-type').text('Looks like: ' + weatherType);
-        if(tempFar < 65) {
-          $('#temperature').text('Temperature: ' + tempFar + '°F.  Dress for cold weather!')
-          $('.weather-data').prepend("<img src='/assets/cold_weather.jpg' />");
-        } else {
-          $('#temperature').text('Temperature: ' + tempFar + '°F.  Dress for warm weather!')
-          $('.weather-data').prepend("<img src='cold_weather.jpg' />");
-        }
-        $('#wind').text('windSpeed: ' + windSpeed + 'mph');
-        console.log(tempFar);
-        console.log(api);
-        // $('.weather-data').html('latitude: ' + lat + '<br>longitude: ' + long);
-      });
-    })
-  }
+var showCelciusListener = function(){
+  $('#celcius').on('click', function(){
+    $()
+  });
 }
 
 var headerActiveListener = function(){

@@ -24,19 +24,46 @@
 .container {
   width: 80%;
   margin: auto;
-  /*border-bottom: 2px solid black;*/
 }
 
-.about-image {
-  height: 30em;
-  padding-top: 10px;
-  width: 100%;
+.weather-data {
+  background-color: #020f23;
+  height: 10em;
+  width: 50%;
+}
+
+.weather-data > p {
   display: inline-block;
+  width: 50%;
+}
+
+.current-weather {
+  color: white;
+  font-size: 13px;
+  padding-bottom: 6px;
+  padding-left: 10%;
+}
+
+.wi {
+  font-size: 75px;
+  color: white;
+  float: right;
+  align-content: center;
+  position: relative;
+  padding-right: 5px;
+}
+
+#current-location-weather {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  width: 50%;
 }
 
 #lake-image {
   width: 100%;
-  padding: 10px;
+  height: 30em;
+  padding-top: 10px;
 }
 
 .about-text {
@@ -100,7 +127,6 @@ a:hover:not(.active) {
 .trips {
   padding-top: 10px;
   padding-bottom: 10px;
-  /*width: 100%;*/
   display: inline-block;
   border-bottom: 1.5px solid black;
   display: inline-block;
@@ -145,8 +171,6 @@ a:hover:not(.active) {
   outline: 0;
   width: 20%;
 }
-
-
 
 .reserve-link {
   margin-left: 5%;
