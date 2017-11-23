@@ -74,8 +74,36 @@ var yosemiteWeatherAPI = function(){
         $('#temperature').text('Temperature of ' + tempFar + '°F or ' + tempCel + '°C')
         // $('.weather-data').prepend("<img src='/assets/' />");
       }
-      if(weatherType === 'clear sky') {
-        $('.weather-data').append("<i class='wi wi-day-sunny'> </i>");
+      // if(weatherType === 'clear sky') {
+      //   $('.weather-data').append("<i class='wi wi-day-sunny'> </i>");
+      // }
+      switch(weatherType) {
+        case 'clear sky':
+          $('.weather-data').append("<i class='wi wi-day-sunny'> </i>");
+          break;
+        case 'few clouds':
+          $('.weather-data').append("<i class='wi wi-day-cloudy'> </i>");
+          break;
+        case 'scattered clouds':
+          $('.weather-data').append("<i class='wi wi-cloudy'> </i>");
+          break;
+        case 'broken clouds':
+          $('.weather-data').append("<i class='wi wi-cloudy'> </i>");
+          break;
+        case 'shower rain':
+          $('.weather-data').append("<i class='wi wi-day-showers'> </i>");
+          break;
+        case 'rain':
+          $('.weather-data').append("<i class='wi wi-day-rain'> </i>");
+          break;
+        case 'thunderstorm':
+          $('.weather-data').append("<i class='wi wi-day-thunderstorm'> </i>");
+          break;
+        case 'snow':
+          $('.weather-data').append("<i class='wi wi-day-snow'> </i>");
+          break;
+        case 'mist':
+          $('.weather-data').append("<i class='wi wi-day-sprinkle'> </i>");
       }
     });
 }
