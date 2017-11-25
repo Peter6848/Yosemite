@@ -1,3 +1,72 @@
 // Place all the styles related to the trips controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#trips-page-title {
+  text-align: center;
+}
+
+.trips {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline-block;
+  border-bottom: 1.5px solid black;
+  display: inline-block;
+}
+
+.trip-title {
+  text-align: center;
+}
+
+.trip-info {
+  display: inline-block;
+  float: right;
+  text-align: center;
+  width: 70%;
+  display: none;
+  font-family: 'Arial';
+}
+
+.trips-images {
+  float: left;
+  display: inline-block;
+  height: 20%;
+  width: 30%;
+}
+
+.book-info {
+  width: 70%;
+  float: right;
+}
+
+.details-button {
+  margin-left: 5%;
+  background-color: #5b5b5b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-bottom: 3%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: 0;
+  width: 20%;
+}
+
+.reserve-link {
+  margin-left: 5%;
+  background-color: #5b5b5b;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /*display: inline-block;*/
+  font-size: 16px;
+  outline: 0;
+  width: 20%;
+}
+
+.description {
+  padding: 4%;
+}

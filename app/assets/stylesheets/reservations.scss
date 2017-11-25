@@ -1,0 +1,102 @@
+#reserve-h2 {
+  text-align: center;
+}
+
+.progress-bar-container {
+  width: 100%;
+}
+
+.progress-bar {
+  counter-reset: step;
+}
+
+.progress-bar > li {
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+}
+
+.progress-bar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress-bar li:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+.progress-bar li:first-child:after {
+  content: none;
+}
+
+.progress-bar li.progress-bar-active {
+  color: green;
+}
+
+.progress-bar li.progress-bar-active:before {
+  border-color: green;
+}
+
+.progress-bar li.progress-bar-active + li:after {
+  background-color: green;
+}
+
+///////////////////////////////////////////////////
+
+// .book-trip-form {
+//   margin-top: 10px;
+//   display: inline-block;
+//   float: right;
+//   width: 70%;
+//   height: 85px;
+// }
+//
+// .trip-form {
+//   background-color: #dbdbdb;
+//   padding-left: 5%;
+//   text-align: left;
+//   text-transform: uppercase;
+//   display: none;
+//   height: 100%;
+//   width: 100%;
+//   animation-name: stretch;
+//   animation-duration: .5s;
+//   animation-delay: 0;
+//   animation-fill-mode: none;
+//   animation-play-state: running;
+// }
+//
+// label {
+//   display: inline-block;
+//   width: 105px;
+// }
+//
+// @keyframes stretch {
+//   0% {
+//     transform: scale(.3);
+//     border-radius: 100%;
+//   }
+//   50% {
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
