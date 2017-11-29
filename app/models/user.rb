@@ -7,10 +7,14 @@ class User < ApplicationRecord
   validates :email, :phone_number, uniqueness: true
   has_secure_password
 
-  def full_name()
+  def full_name
     self.first_name + ' ' + self.last_name
   end
 
+  private
 
+    def downcase_email
+      self.email = email.downcase
+    end
 
 end
